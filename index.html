@@ -1,0 +1,607 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<title>Experiencia y consejos desarrollando apps para Firefox OS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+
+<body class="list">
+
+	<section class="slide" id="Cover">
+		<div>
+			<h2>Experiencia y consejos desarrollando apps para Firefox OS</h2>
+			<img src="pictures/firefox_os_logo.png" width="200" />
+			<style>
+				#Cover {
+					background-color: #E66000;
+				}
+				#Cover h2 {
+					margin:30px 0 0;
+					color:#FFF;
+					text-align:center;
+					font-size:70px;
+					}
+				#Cover p {
+					margin:10px 0 0;
+					text-align:center;
+					color:#FFF;
+					font-style:italic;
+					font-size:20px;
+					}
+					#Cover p a {
+						color:#FFF;
+					}
+					#Cover img {display: block;margin:40px auto 0px;text-align: center}
+			</style>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>¡Hola, hola!</h2>
+		<p style="float:left;width:75%;font-size:40px;line-height:150%;text-align:center">Miguel Ángel Durán <strong> 29</strong> <mark>#Barcelona</mark><br />Me gustan los osos panda. Desarrollo cosas.<br />Y tengo una adicción...</p>
+		<p style="float:right;width:25%"><img src="pictures/yo.jpg" width="260" style="text-align:right" /></p>
+	</div></section>
+
+	<section class="slide cover" id="Learning"><div>
+		<h2>APRENDER</h2>
+		<img src="pictures/gif/learning.gif" style="width:100%;height:auto" />
+		<style>
+			#Learning h2 {color:#FFF; text-shadow: 0px 0px 20px #000; font-size:130px; margin-top: -100px;text-align:center;}
+		</style>
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Y ahora...<br />una encuesta</h2>
+	</div></section>
+
+  <section class="slide"><div>
+    <h2>Firefox OS</h2>
+    <ul>
+      <li>Sistema operativo móvil basado en HTML5
+      <li>Con núcleo Linux, motor Gecko y de código abierto.
+      <li>Desarrollado por Mozilla y contribuidores externos
+      <li>Y, además, también es algo para...
+    </ul>
+  </div></section>
+
+  <section class="slide cover" id="Loco"><div>
+    <h2>VOLVERSE LOCO</h2>
+    <img src="pictures/gif/loco.gif" style="width:100%;height:auto" />
+    <style>
+      #Loco h2 {color:#FFF; text-shadow: 0px 0px 20px #000; font-size:130px; margin-top: -100px;text-align:center;}
+    </style>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Hubii</h2>
+    <p style="float:right;width:20%"><img src="pictures/hubii_icon.png" width="260" style="text-align:right" /></p>
+    <p style="float:left;width:75%">- App para leer noticias según tu localización.<br />- Exclusiva de Firefox OS. (por ahora)<br />- Precargada en nuevos dispositivos Firefox OS de Telefonica.<br />- Ayuda de Mozilla. (localizaciones, soporte...)</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <p style="text-align:center">
+      <img src="pictures/screen_01.png" />
+      <img src="pictures/screen_02.png" />
+    </p>
+  </div></section>
+
+  <section class="slide"><div>
+    <p style="text-align:center">
+      <img src="pictures/screen_03.png" />
+      <img src="pictures/screen_04.png" />
+    </p>
+  </div></section>
+
+  <section class="slide"><div>
+    <p style="text-align:center">
+      <img src="pictures/screen_05.png" />
+      <img src="pictures/screen_06.png" />
+    </p>
+  </div></section>
+
+  <section class="slide cover" id="Decisiones"><div>
+    <h2>LAS PRIMERAS DECISIONES</h2>
+    <img src="pictures/gif/decisiones.gif" style="width:100%;height:auto;margin-top:170px" />
+    <style>
+      #Decisiones h2 {color:#FFF; text-shadow: 0px 0px 20px #000; font-size:80px; margin-top: -50px;text-align:center;}
+    </style>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Las primeras decisiones</h2>
+    <ul>
+      <li>¿Usaremos un framework? ¿Lo necesitamos?</li>
+      <li>¿Qué librerías necesitamos?</li>
+      <li>¿Qué funcionalidad necesita mi aplicación?</li>
+    </ul>
+    <p class="note">Si tu idea ya existe. Hazla mejor.</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Frameworks</h2>
+    <ul>
+      <li>Ionic Framework</li>
+      <li>jQuery Mobile</li>
+      <li>Kendo IU</li>
+      <li>Sencha Touch</li>
+      <li>React</li>
+    </ul>
+    <p class="note">Mi recomendación: App JS - <a href="http://code.kik.com/app/2/">http://code.kik.com/app/2/</a></p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Librerías</h2>
+    <ul>
+      <li>Manipulación DOM: jQuery, Zepto, QuoJS...</li>
+      <li>MVC, MVVM y otros: Backbone, Angular, Ember...</li>
+      <li>Mapas: Google Maps, Mapbox, Modest Maps, Leaflet...</li>
+      <li>Utilidades: underscore, lodash...</li>
+    </ul>
+    <p class="note">¿Realmente las necesitamos?</p>
+  </div></section>
+
+  <section class="slide cover" id="bazooka"><div>
+    <h2>EVITA MATAR MOSCAS A CAÑONAZOS</h2>
+    <img src="pictures/gif/bazooka.gif" style="width:100%;height:auto;margin-top:20px" />
+    <style>
+      #bazooka h2 {color:#FFF; text-shadow: 0px 0px 20px #000; font-size:80px; margin-top: -50px;text-align:center;}
+    </style>
+  </div></section>
+
+  <section class="slide"><div>
+    <p style="text-align:center; font-size: 70px;font-weight:bold;color:#036">Zepto(25KB)<br />VS.<br />jQuery(84KB)</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <img src="pictures/microjs.png" style="width:60%;height:auto;float:right"/>
+    <ul>
+      <li>Supermercado de mini librerías. Todo tipo de necesidades.</li>
+      <li>Funcionalidad específica</li>
+      <li>Menores de 2KB</li>
+      <li>De código abierto y con comunidad en GitHub</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>MVP (Minimum viable product)</h2>
+    <p style="text-align:center"><img src="pictures/mvp.jpg" style="height:auto;" /></p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>El tamaño importa (y mucho)</h2>
+    <ol>
+      <li>Mister obvio: carga más rápido</li>
+      <li>Piensa en los dispositivos con poca memoria (Bangladesh - Marketplace)</li>
+      <li>Menos tendrá que descargar el usuario del Marketplace</li>
+    </ol>
+    <p>PERO NO HAY QUE VOLVERSE LOCO.<br />Hacer que funcione -> hacerlo bien -> hacerlo rápido.</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>¿Cómo y qué optimizar?</h2>
+    <ol>
+      <li>Sube en tu aplicación solo los archivos necesarios</li>
+      <li>Las imágenes siempre optimizadas</li>
+      <li>Javascript y CSS minificado/optimizado</li>
+      <li>Carga primero tu CSS, al final tu Javascript (o usa RequireJS)</li>
+      <li>PROHIBIDO USAR ANIMACIONES EN JAVASCRIPT</li>
+    </ol>
+  </div></section>
+
+  <section class="slide cover" id="nooooo"><div>
+    <img src="pictures/gif/noooo.gif" style="width:100%;height:auto;margin-top:20px" />
+    <style>
+      #Decisiones h2 {color:#FFF; text-shadow: 0px 0px 20px #000; font-size:80px; margin-top: -50px;text-align:center;}
+    </style>
+  </div></section>
+
+  <section class="slide" id="gif"><div>
+    <h2 style="text-align:center">CSS 3</h2>
+    <div class="cuadrado"></div>
+  <style>
+    .cuadrado{
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: relative;
+      /* Chrome, Safari, Opera */
+      -webkit-animation-name: myfirst;
+      -webkit-animation-duration: 5s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0.5s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      -webkit-animation-play-state: running;
+      /* Standard syntax */
+      animation-name: myfirst;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-delay: 0.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-play-state: running;
+    }
+
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes myfirst {
+      0%   {background:red; left:0px; top:0px;}
+      25%  {background:yellow; left:200px; top:0px;}
+      50%  {background:pink; left:200px; top:200px;}
+      75%  {background:green; left:0px; top:200px;}
+      100% {background:red; left:0px; top:0px;}
+    }
+
+    /* Standard syntax */
+    @keyframes myfirst {
+      0%   {background:red; left:0px; top:0px;}
+      25%  {background:yellow; left:200px; top:0px;}
+      50%  {background:pink; left:200px; top:200px;}
+      75%  {background:green; left:0px; top:200px;}
+      100% {background:red; left:0px; top:0px;}
+    }
+  </style>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Codificación</h2>
+    <p>¡Recuerda añadir la codificación a tu HTML!</p>
+    <pre style="font-size:24px">
+      <code>&lt;meta charset="utf-8" /&gt;</code>
+    </pre>
+  </div></section>
+
+	<section class="slide"><div>
+		<h2>Localización</h2>
+    <p>En el &lt;head&gt;</p>
+    <pre style="font-size:24px">
+      <code>&lt;script type="text/javascript" src="l10n.js"&gt;&lt;/script&gt;</code>
+      <code>&lt;link rel="prefetch" type="application/l10n" href="data.ini" /&gt;</code>
+    </pre>
+	</div></section>
+
+  <section class="slide"><div>
+    <h2>Localización</h2>
+    <p>En el &lt;html&gt;</p>
+    <pre style="font-size:24px">
+      <code>&lt;button <mark>data-l10n-id="test"</mark>&gt;This is a test&lt;/button&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Localización</h2>
+    <p>En el data.ini</p>
+    <pre style="font-size:24px">
+      <code>[en-US]</code>
+      <code>test = This is a test</code>
+      <code>test.title = click me!</code>
+      <code>[es]</code>
+      <code>test = Esto es un test</code>
+      <code>test.title = ¡clica aquí!</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Localización</h2>
+    <p>En Javascript</p>
+    <pre style="font-size:24px">
+      <code>var message = document.webL10n.get('test');</code>
+      <code>var message2 = document.webL10n.get('test2');</code>
+      <code>var message3 = document.webL10n.get('test3');</code>
+      <code>console.log( message );</code>
+      <code>console.log( message2 );</code>
+      <code>console.log( message3 );</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Localización</h2>
+    <p>¡Usa un alias! Haz tu código más legible</p>
+    <pre style="font-size:24px">
+      <code>var _ = document.webL10n.get;</code>
+      <code>var message = _('test')</code>
+      <code>var message2 = _('test2')</code>
+      <code>var message3 = _('test3')</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Localización</h2>
+    <p>Detectando casos especiales</p>
+    <pre>
+      <code>// localize the timeago</code>
+      <code>var language = navigator.language</code>
+      <code></code>
+      <code>if ( language === 'es' ) {</code>
+      <code>  // entonces es español</code>
+      <code>}</code>
+    </pre>
+
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Cachea, cachea, cachea</h2>
+    <p>Determinar si podemos cachear información<br />, sobretodo la que venga de queries al servidor.<br />Podemos utilizar localStorage o indexedDB.<br /> También para <strong>guardar las opciones del usuario</strong><br />Librería <a href="https://github.com/pamelafox/lscache">lscache</a> de Pamela Fox</p> 
+  </div></section>
+
+  <section class="slide"><div>
+    <p>Ejemplo de uso de la librería lscache (localStorage)</p>
+    <pre>
+      <code>// recupera la información de localstorage</code>
+      <code>var ultimasnoticias = lscache.get( 'ultimasnoticias' );</code>
+      <code>if ( !ultimasnoticias ) {</code>
+      <code>  // recuperamos las noticias del servidor con AJAX</code>
+      <code>}</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Mejorar la interacción del usuario y los taps</h2>
+    <p>Poder dar estilo cuando el usuario está haciendo tap en algún botón</p>
+
+    <pre style="font-size:15px">
+      <code>document.addEventListener("touchstart", function(){}, true);</code>
+    </pre>
+
+    <p>Ahora podremos usar en CSS los estilos :hover sobre los botones.</p>
+
+    <pre style="font-size:15px">
+      <code>.buton:hover {</code>
+      <code>  opacity: 0.5</code>
+      <code>}</code>
+    </pre>
+
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>¿Qué hay de Google Analytics en Firefox OS?</h2>
+    <p>No podemos usar el snippet por culpa del Content Security Policy. Usemos "Measurement Protocol".</p>
+    <pre style="font-size:15px">
+      <code>$.post( 'http://www.google-analytics.com/collect',</code>
+      <code>  { v: 1,</code>
+      <code>    tid: 'UA-264323398-4',</code>
+      <code>    dp: nombre_pagina,</code>
+      <code>    t: 'pageview',</code>
+      <code>    ul: navigator.language</code>
+      <code>  }</code>
+      <code>)</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Avisa si el dispositivo no tiene conexión</h2>
+    <p>Es una muy buena práctica avisar al usuario que no tiene conexión. Y más si tu aplicación necesita internet para funcionar.</p>
+    <pre>
+      <code>window.addEventListener( "offline", function () {</code>
+      <code>  $( '#no_connection' ).addClass( 'show' )</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Ejemplo de aviso sin conexión</h2>
+    <p><img src="pictures/sin_conexion.png" style="display:block;margin:0 auto;width:50%;height:auto"/></p>
+  </div></section>  
+
+  <section class="slide cover" id="noavisado"><div>
+    <h2>USUARIO NO AVISADO DE SU CONEXIÓN</h2>
+    <img src="pictures/gif/idontknow.gif" style="width:100%;height:auto;margin-top:20px" />
+    <style>
+      #noavisado h2 {color:#FFF; text-shadow: 0px 0px 20px #000; font-size:80px; margin-top: 250px;text-align:center;}
+    </style>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Preprocesadores</h2>
+    <ol>
+      <li>Organizando mejor el código (variables y reutilizar código)</li>
+      <li>Más rapidez en el trabajo</li>
+      <li>Creando código reutilizable</li>
+      <li>Más fácil de mantener</li>
+    </ol>
+    <p class="note">También tiene sus inconvenientes<br />(aprendizaje, compilación, sacar todo el potencial)</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Preprocesadores CSS</h2>
+    <ol>
+      <li>Adiós símbolos repetitivos ":", ";"</li>
+      <li>Selectores anidados</li>
+      <li>Variables, Operaciones, Mixins </li>
+      <li>DRY: Don't Repeat Yourself</li>
+      <li>Mil millones de ventajas más: compresión, comentarios...</li>
+      <li>Opciones: SASS, Less, Stylus...
+    </ol>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Preprocesador CSS: Stylus</h2>
+    <pre style="font-size:15px">
+      <code>.box { /* version en CSS */</code>
+      <code>  background-color: #010101;</code>
+      <code>  color: #f0f0f0;</code>
+      <code>  -webkit-border-radius: 5px;</code>
+      <code>  -moz-border-radius: 5px;</code>
+      <code>  border-radius: 5px;</code>
+      <code>}</code>
+      <code>.box .button {</code>
+      <code>  -webkit-border-radius: 5px;</code>
+      <code>  -moz-border-radius: 5px;</code>
+      <code>  border-radius: 5px;</code>
+      <code>  color: #010101;</code>
+      <code>  background-color: #f0f0f0;</code>
+      <code>}</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Preprocesador CSS: Stylus</h2>
+    <pre style="font-size:15px">
+      <code>.box // version en Stylus - 1</code>
+      <code>  background-color #010101</code>
+      <code>  color #f0f0f0</code>
+      <code>  -webkit-border-radius 5px</code>
+      <code>  -moz-border-radius 5px</code>
+      <code>  border-radius 5px</code>
+      <code>  .button</code>
+      <code>    -webkit-border-radius 5px</code>
+      <code>    -moz-border-radius 5px</code>
+      <code>    border-radius 5px</code>
+      <code>    color #010101</code>
+      <code>    background-color #f0f0f0</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Preprocesador CSS: Stylus</h2>
+    <pre style="font-size:15px">
+      <code>border-radius()</code>
+      <code>  -webkit-border-radius arguments</code>
+      <code>  -moz-border-radius arguments</code>
+      <code>  border-radius arguments</code>
+      <code>.box // version en Stylus - 2</code>
+      <code>  background-color #010101</code>
+      <code>  color #f0f0f0</code>
+      <code>  border-radius 5px</code>
+      <code>  .button</code>
+      <code>    border-radius 5px</code>
+      <code>    color #010101</code>
+      <code>    background-color #f0f0f0</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Preprocesador CSS: Stylus</h2>
+    <pre style="font-size:15px">
+      <code>$whiteColor = #f0f0f0</code>
+      <code>$blackColor = #010101</code>
+      <code>.box // version en Stylus - 3</code>
+      <code>  background-color $blackColor</code>
+      <code>  color $whiteColor</code>
+      <code>  border-radius 5px</code>
+      <code>  .button</code>
+      <code>    border-radius 5px</code>
+      <code>    color $whiteColor</code>
+      <code>    background-color $blackColor</code>
+    </pre>
+  </div></section>
+
+  <section class="slide shout" id="PruebaStylus"><div>
+    <h2>PRUEBA STYLUS<br />
+    <a href="http://learnboost.github.io/stylus/try.html">ES GRATIS Y OPEN SOURCE</a></h2>
+    <style>
+      #PruebaStylus h2 {font-size:100px}
+    </style>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Preprocesador CoffeeScript</h2>
+    <ul>
+      <li>Lenguaje que compila en CoffeeScript</li>
+      <li>Podemos olvidarnos de las llaves, hay que indentar</li>
+      <li>Olvidarnos de los ";", no necesitamos poner "var".</li>
+      <li>Return implicito en la última línea</li>
+      <li>Funciones y bucles de una sola línea</li>
+      <li>Cambiar el uso del contexto this. por @</li>
+      <li>function() por -></li>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Hola Mundo JavaScript</h2>
+    <pre style="font-size:24px">
+      <code>var mensaje = "Hola Mundo";</code>
+      <code>var mostrarMensaje = function( mensaje ) {</code>
+      <code>  alert( mensaje );</code>
+      <code>}</code>
+      <code>mostrarMensaje( mensaje );</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Hola Mundo en CoffeeScript</h2>
+    <pre style="font-size:24px">
+      <code>mensaje = "Hola Mundo"</code>
+      <code>mostrarMensaje = ( mensaje ) -> alert( mensaje )</code>
+      <code>mostrarMensaje( mensaje )</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Hola Mundo JavaScript Compilado</h2>
+    <pre style="font-size:24px">
+      <code>var mensaje, mostrarMensaje;</code>
+      <code>mensaje = "Hola Mundo";</code>
+      <code>mostrarMensaje = function(mensaje) {</code>
+      <code>  return alert(mensaje);</code>
+      <code>};</code>
+      <code>mostrarMensaje( mensaje );</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Ventajas de CoffeeScript</h2>
+    <ul>
+      <li>It's just Javascript. (compilar)</li>
+      <li>Escribe menos, haz más. (menos líneas, menos bugs)</li>
+      <li>Código mucho más legible y limpio</li>
+      <li>Compatible con librerías JavaScript ya existentes.</li>
+      <li>Basado en la sintaxis de Ruby y Python</li>
+    </ul>
+    <p class="note">Empresas como Dropbox y AirBnB lo usan.</p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Desventajas de CoffeeScript</h2>
+    <ul>
+      <li>No es perfecto. Sensible a los espacios y las tabulaciones</li>
+      <li>El compilador da poca información al detectar un error</li>
+      <li>Hacer debugging puede ser molesto</li>
+      <li>Que el texto sea más legible es discutible</li>
+      <li>Hay mucha gente que lo odia (a veces injustificadamente)</li>
+    </ul>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>Pero aprende antes<br /> Javascript</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Libro recomendado sobre CoffeeScript</h2>
+    <p style="text-align:center"><a href="https://leanpub.com/coffeescript/"><img src="pictures/libro.png" /></a></p>
+  </div></section>
+
+  <section class="slide shout" id="PruebaCoffeeScript"><div>
+    <h2>PRUEBA COFFEESCRIPT<br />
+    <a href="http://coffeescript.org/">ES GRATIS Y OPEN SOURCE</a></h2>
+    <style>
+      #PruebaCoffeeScript h2 {font-size:100px}
+    </style>
+  </div></section>
+
+  <section class="slide cover" id="despuespre"><div>
+    <h2>TE HARÁN FELIZ</h2>
+    <img src="pictures/gif/sonriendo.gif" style="width:100%;height:auto;margin-top:20px" />
+    <style>
+      #despuespre h2 {color:#FFF; text-shadow: 0px 0px 20px #000; font-size:80px; margin-top: -50px;text-align:center;}
+    </style>
+  </div></section>
+
+  <section class="slide"><div>
+    <figure>
+      <blockquote>
+        <p style="font-size:40px;text-align:center"><br />El camino del sabio<br />es aprender algo todos los días</p>
+      </blockquote>
+    </figure>
+    <p style="text-align:center">Proverbio chino</p>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>¡Gracias!<br />¿Preguntas?</h2>
+  </div></section>
+
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
